@@ -17,28 +17,51 @@ head2.next = ListNode(4)
 
 res = [cur1,cur2]
 
-def getEle(lN):
-    stack = []
-    while lN != None:
-        stack.append(lN.val)
-        lN = lN.next
-    return stack
 
-def goGood(res):
-    total = []
-    for i in res:
-        total = total + getEle(i)
-    return sorted(total)
 
-def ListToListNode(l1):
-    header = ListNode(l1[0])
-    cur = header
-    for i in range(1,len(l1)):
-        header.next = ListNode(l1[i])
-        header = header.next
-    return cur
 
-print(ListToListNode(goGood(res)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# brute force approach
+
+# def getEle(lN):
+#     stack = []
+#     while lN != None:
+#         stack.append(lN.val)
+#         lN = lN.next
+#     return stack
+#
+# def goGood(res):
+#     total = []
+#     for i in res:
+#         total = total + getEle(i)
+#     return sorted(total)
+#
+# def ListToListNode(l1):
+#     header = ListNode(l1[0])
+#     cur = header
+#     for i in range(1,len(l1)):
+#         header.next = ListNode(l1[i])
+#         header = header.next
+#     return cur
+#
+# print(ListToListNode(goGood(res)))
 
 
 
