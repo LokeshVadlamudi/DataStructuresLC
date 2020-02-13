@@ -1,8 +1,10 @@
-# LC - 1007 Minimum Domino Rotations For Equal Row
-from functools import reduce
 
-A = [2,1,2,4,2,2]
-B = [5,2,6,2,3,2]
+
+# LC - 1007 Minimum Domino Rotations For Equal Row
+# from functools import reduce
+
+# A = [2,1,2,4,2,2]
+# B = [5,2,6,2,3,2]
 #
 # for x in [A[0],B[0]]:
 #     if all(x in d for d in zip(A,B)):
@@ -15,14 +17,20 @@ B = [5,2,6,2,3,2]
 # x = s.pop()
 # print(len(A) - max(A.count(x),B.count(x)))
 
-
-
-
-
-
-
-
-
+# solution 3
+# n = len(A)
+# validNumbers = (A[0], B[0])
+# for x in validNumbers:
+#     countA = 0
+#     countB = 0
+#     for i in range(n):
+#         countA += (x == A[i])
+#         countB += (x == B[i])
+#         if x != B[i] and x != A[i]:
+#             break
+#     if i == n-1:
+#         return n - max(countA,countB)
+# return -1
 
 
 
@@ -89,26 +97,7 @@ B = [5,2,6,2,3,2]
 # print([i for i in connections if i[0] == a or i[1] == a])
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# LC 759 - Employee Free Time
 # schedule = [[[1,2],[5,6]],[[1,3]],[[4,10]]]
 #
 # res = []
