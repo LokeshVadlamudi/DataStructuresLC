@@ -1,10 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # LC - 364. Nested List Weight Sum II
 # nestedList = [[],[],[]]
 #
 #
 # class Solution:
 #     def depthSumInverse(self, nestedList: List[NestedInteger]) -> int:
-#
+
+
+#better solution
+            # unweighted = 0
+            # weighted = 0
+            # while nestedList:
+            #     nextLevel = []
+            #     for i in nestedList:
+            #         if i.isInteger():
+            #             unweighted += i.getInteger()
+            #         else:
+            #             nextLevel.extend(i.getList())
+            #     weighted += unweighted
+            #     nestedList = nextLevel
+            # return weighted
+
+
+
+
+# average solution
 #         from collections import defaultdict
 #         d = defaultdict(list)
 #
