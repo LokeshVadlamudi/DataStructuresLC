@@ -15,22 +15,42 @@
 
 # 1366. Rank Teams by Votes
 # votes = ["FVSHJIEMNGYPTQOURLWCZKAX","AITFQORCEHPVJMXGKSLNZWUY","OTERVXFZUMHNIYSCQAWGPKJL","VMSERIJYLZNWCPQTOKFUHAXG","VNHOZWKQCEFYPSGLAMXJIUTR","ANPHQIJMXCWOSKTYGULFVERZ","RFYUXJEWCKQOMGATHZVILNSP","SCPYUMQJTVEXKRNLIOWGHAFZ","VIKTSJCEYQGLOMPZWAHFXURN","SVJICLXKHQZTFWNPYRGMEUAO","JRCTHYKIGSXPOZLUQAVNEWFM","NGMSWJITREHFZVQCUKXYAPOL","WUXJOQKGNSYLHEZAFIPMRCVT","PKYQIOLXFCRGHZNAMJVUTWES","FERSGNMJVZXWAYLIKCPUQHTO","HPLRIUQMTSGYJVAXWNOCZEKF","JUVWPTEGCOFYSKXNRMHQALIZ","MWPIAZCNSLEYRTHFKQXUOVGJ","EZXLUNFVCMORSIWKTYHJAQPG","HRQNLTKJFIEGMCSXAZPYOVUW","LOHXVYGWRIJMCPSQENUAKTZF","XKUTWPRGHOAQFLVYMJSNEIZC","WTCRQMVKPHOSLGAXZUEFYNJI"]
-#
-# d = {}
-#
-# for i in votes:
-#     for j in i:
-#         ind = i.find(j)
-#         if j not in d.keys():
-#             d[j] = ind
-#         else:
-#             d[j] += ind
+
+votes = ["BCA","CAB","CBA","ABC","ACB","BAC"]
+# d = {c: [0]*len(votes[0]) + [c] for c in votes[0]}
 #
 # print(d)
-# d = sorted(d, key=lambda k: (d[k], k))
 #
-# print(''.join(d))
-# res = []
+# for vote in votes:
+#     for i,c in enumerate(vote):
+#         d[c][i] -= 1
+# print(''.join(sorted(votes[0], key=lambda v: (d[v],v))))
+
+
+
+
+
+
+
+
+
+
+
+#
+d = {}
+
+for i in votes:
+    for j in i:
+        ind = i.find(j)
+        if j not in d.keys():
+            d[j] = ind
+        else:
+            d[j] -= ind
+
+print(d)
+d = sorted(d, key=lambda k: (d[k], k))
+d = reversed(''.join(d))
+print(''.join(d))
 
 
 

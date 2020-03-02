@@ -21,9 +21,18 @@
 # res.sort()
 # print(res)
 
+# 202. Happy Number
 
-
-
+# n = 19
+#
+# d = []
+#
+# while (n!=1):
+#     if n in d:
+#         print(False)
+#     d.append(n)
+#     n = sum([int(i)**2 for i in str(n)])
+# print(True)
 
 
 
