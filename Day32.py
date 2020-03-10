@@ -19,8 +19,24 @@
 # print(res)
 
 # 75. Sort Colors
-c = 0
-nums = [2,0,2,1,1,0]
+# c = 0
+# nums = [2,0,2,1,1,0]
+
+# l = 0
+# h = len(nums) - 1
+# i = 0
+#
+# while i <= h:
+#     if nums[i] == 0:
+#         nums[l], nums[i] = nums[i], nums[l]
+#         l += 1
+#         i += 1
+#     elif nums[i] == 2:
+#         nums[h], nums[i] = nums[i], nums[h]
+#         h -= 1
+#     elif nums[i] == 1:
+#         i += 1
+
 # for i in range(len(nums)):
 #     if nums[i] == 0:
 #         nums[c] , nums[i] = nums[i] , nums[c]
@@ -34,8 +50,16 @@ nums = [2,0,2,1,1,0]
 #         nums[c] , nums[i] = nums[i] , nums[c]
 #         c += 1
 
-
-
+# 700. Search in a Binary Search Tree
+# if not root:
+#     return None
+#
+# if root.val == val:
+#     return root
+# elif root.val > val:
+#     return self.searchBST(root.left, val)
+# elif root.val < val:
+#     return self.searchBST(root.right, val)
 
 
 
